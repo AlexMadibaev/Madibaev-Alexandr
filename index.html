@@ -1,0 +1,1654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Александр Мадибаев - Портфолио</title>
+
+    <!--
+    - favicon
+  -->
+    <link rel="shortcut icon" href="./assets/images/LOGO.ico" type="image/x-icon">
+
+    <!--
+    - custom css link
+  -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!--
+    - google font link
+  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- 
+      font-awesome link 
+      -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+            /* Отступ сверху */
+        }
+        
+        .btn:hover {
+            background-color: #0056b3;
+        }
+        
+        .btn i {
+            margin-right: 8px;
+        }
+        
+        .contact-button-wrapper {
+            text-align: center;
+        }
+        
+        .skill-progress-80 {
+            width: 80%;
+        }
+        
+        .skill-progress-95 {
+            width: 95%;
+        }
+        
+        .skill-progress-90 {
+            width: 90%;
+        }
+        
+        .skill-progress-60 {
+            width: 60%;
+        }
+        
+        .form-btn {
+            margin-top: 20px;
+        }
+        
+        .mapbox iframe {
+            border: 0;
+        }
+        
+        .file-upload-label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        /* Модальные окна для отзывов */
+.testimonials-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.testimonials-modal-content {
+    background: var(--eerie-black-1);
+    border: 1px solid var(--jet);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.testimonials-modal.show .testimonials-modal-content {
+    transform: scale(1);
+}
+
+.testimonials-modal-close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--light-gray);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    line-height: 1;
+    background: none;
+    border: none;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.testimonials-modal-close:hover {
+    color: var(--orange-yellow-crayola);
+}
+
+.testimonials-modal-avatar-box {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    border-radius: 25%;
+    border: 4px solid var(--orange-yellow-crayola);
+}
+
+.testimonials-modal-avatar-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials-modal-title {
+    font-size: 1.8rem;
+    color: var(--white-2);
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: 500;
+}
+
+.testimonials-modal-text {
+    color: var(--light-gray);
+    line-height: 1.8;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+/* Добавляем курсор pointer для карточек отзывов */
+.testimonials-item .content-card {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.testimonials-item .content-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .testimonials-modal-content {
+        padding: 30px 20px;
+    }
+    
+    .testimonials-modal-title {
+        font-size: 1.5rem;
+    }
+    
+    .testimonials-modal-text {
+        font-size: 1rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!--
+    - #MAIN
+  -->
+
+    <main>
+
+        <!--
+      - #SIDEBAR
+    -->
+
+        <aside class="sidebar" data-sidebar>
+
+            <div class="sidebar-info">
+
+                <figure class="avatar-box">
+                    <img src="./assets/images/my-avatar.png" alt="Madibaev Alexandr" width="80">
+                </figure>
+
+                <div class="info-content">
+                    <h1 class="name" title="Madibaev Alexandr">Мадибаев Александр</h1>
+
+                    <p class="title">Веб/Графический Дизайнер</p>
+                </div>
+
+                <button type="button" class="info_more-btn" data-sidebar-btn>
+                    <span>Показать контакты</span>
+
+                    <ion-icon name="chevron-down"></ion-icon>
+                </button>
+
+            </div>
+
+            <div class="sidebar-info_more">
+
+                <div class="separator"></div>
+
+                <ul class="contacts-list">
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="mail-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Email</p>
+
+                            <a href="mailto:a.madibaev@gmail.com" class="contact-link">a.madibaev@gmail.com</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="phone-portrait-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Телефон</p>
+
+                            <a href="tel:+992900013307" class="contact-link">+(992)90&#8209;001&#8209;3307</a>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="calendar-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Дата рождения</p>
+
+                            <time datetime="2003-04-13">13 апреля 2003 г.</time>
+                        </div>
+
+                    </li>
+
+                    <li class="contact-item">
+
+                        <div class="icon-box">
+                            <ion-icon name="location-outline"></ion-icon>
+                        </div>
+
+                        <div class="contact-info">
+                            <p class="contact-title">Местоположение</p>
+
+                            <address>Душанбе, Таджикистан</address>
+                        </div>
+
+                    </li>
+
+                </ul>
+
+                <div class="separator"></div>
+
+
+                <div class="contact-button-wrapper">
+                    <a href="https://t.me/Alexandr_Madibaev" class="btn" target="_blank" rel="noopener">
+                        <i class="fab fa-telegram" aria-hidden="true"></i>Заказать дизайн
+                    </a>
+                </div>
+            </div>
+         </aside>
+
+
+
+
+
+        <!--
+      - #main-content
+    -->
+
+        <div class="main-content">
+
+            <!--
+        - #NAVBAR
+      -->
+
+            <nav class="navbar">
+
+                <ul class="navbar-list">
+
+                    <li class="navbar-item">
+                        <button type="button" class="navbar-link  active" data-nav-link data-i18n="nav.about">Обо мне</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button type="button" class="navbar-link" data-nav-link data-i18n="nav.resume">Резюме</button>
+                    </li>
+
+                    <li class="navbar-item">
+                        <button type="button" class="navbar-link" data-nav-link data-i18n="nav.portfolio">Портфолио</button>
+                    </li>
+                    <!--
+                    <li class="navbar-item">
+                        <button class="navbar-link" data-nav-link>Blog</button>
+                    </li>
+-->
+                    <li class="navbar-item">
+                        <button type="button" class="navbar-link" data-nav-link data-i18n="nav.contact">Заказать дизайн</button>
+                    </li>
+
+                </ul>
+
+                
+
+            </nav>
+
+
+
+
+
+            <!--
+        - #ABOUT
+      -->
+
+            <article class="about  active" data-page="about">
+
+                <header>
+                    <h2 class="h2 article-title">Обо мне</h2>
+                </header>
+
+                <section class="about-text">
+                    <p>
+                        Я — Веб/Графический дизайнер из Душанбе, Таджикистан, с более чем 5-летним опытом. Специализируюсь на создании современных, стильных и функциональных решений для бизнеса: от веб-сайтов и иллюстраций до фирменной типографики.
+                    </p>
+
+                    <p>
+                        Моя главная задача — помочь клиентам выделиться и донести своё послание до аудитории через дизайн. Каждый проект я начинаю с понимания целей и особенностей бизнеса, чтобы результат был не только красивым, но и работающим на развитие компании.
+</p>
+<p>Для моих клиентов важно, чтобы их сайт или визуальная айдентика были удобными, эстетичными и отражали уникальность бренда — именно это я закладываю в каждый проект. Я предлагаю не просто дизайн, а готовый инструмент, который помогает бизнесу выглядеть профессионально и привлекать клиентов.</p>
+
+<p></p>Опыт работы с известными брендами научил меня сочетать креативность с соблюдением строгих стандартов, работать в команде и уделять внимание каждой детали. Это позволяет мне создавать дизайн, который соответствует ожиданиям и вдохновляет новыми возможностями.</p>
+                    </p>
+                </section>
+
+
+                <!--
+          - service
+        -->
+
+                <section class="service">
+
+                    <h3 class="h3 service-title">Мои услуги</h3>
+
+                    <ul class="service-list">
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Графический/Веб дизайн</h4>
+
+                                <p class="service-item-text">
+                                    Самые современные и высококачественные дизайны, созданные на профессиональном уровне.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Веб-разработка</h4>
+
+                                <p class="service-item-text">
+                                    Высококачественная разработка сайтов на профессиональном уровне.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Адаптивные веб-страницы</h4>
+
+                                <p class="service-item-text">
+                                    Я создаю адаптивные веб-страницы для удобства на любом устройстве.
+                                </p>
+                            </div>
+
+                        </li>
+
+                        <li class="service-item">
+
+                            <div class="service-icon-box">
+                                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+                            </div>
+
+                            <div class="service-content-box">
+                                <h4 class="h4 service-item-title">Фоторетушь</h4>
+
+                                <p class="service-item-text">
+                                    Я создаю высококачественные фоторетуши для любой категории на профессиональном уровне.
+                                </p>
+                            </div>
+
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!--
+          - testimonials
+        -->
+
+                <section class="testimonials">
+
+                    <h3 class="h3 testimonials-title">Отзывы</h3>
+
+                    <ul class="testimonials-list has-scrollbar">
+
+                        <li class="testimonials-item">
+                            <div class="content-card" data-testimonials-item>
+
+                                <figure class="testimonials-avatar-box">
+                                    <img src="./assets/images/Specson.png" alt="Specson" width="60" style="border-radius: 25%;" data-testimonials-avatar>
+                                </figure>
+
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Specson</h4>
+
+                                <div class="testimonials-text" data-testimonials-text>
+                                    <p>
+                                    Результат превзошёл ожидания: брендбук получился стильным и очень качественным. Все пожелания были учтены, за что отдельная благодарность за профессионализм и внимание к деталям.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="testimonials-item">
+                            <div class="content-card" data-testimonials-item>
+
+                                <figure class="testimonials-avatar-box">
+                                    <img src="./assets/images/HARF.jpg" alt="Daniel lewis" width="60" style="border-radius: 25%;" data-testimonials-avatar>
+                                </figure>
+
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>издательство "ХАРФ"</h4>
+
+                                <div class="testimonials-text" data-testimonials-text>
+                                    <p>
+                                    Мы сотрудничаем с Александром уже несколько лет и всегда остаёмся довольны результатом. Его профессионализм, внимательность к деталям и творческий подход позволяют реализовывать даже самые сложные проекты. Рекомендуем Александра как надёжного и ответственного специалиста!
+                                    </p>
+                                </div>
+
+                            </div>
+                        </li>
+
+
+                        <li class="testimonials-item">
+                            <div class="content-card" data-testimonials-item>
+
+                                <figure class="testimonials-avatar-box">
+                                    <img src="./assets/images/EkoNeva - white - red@1,25x.png" alt="EkoNeva" width="60" style="border-radius: 25%;" data-testimonials-avatar>
+                                </figure>
+
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>EkoNeva</h4>
+
+                                <div class="testimonials-text" data-testimonials-text>
+                                    <p>
+                                        Оперативная и качественная работа, логотип понравился, спасибо за работу!
+                                    </p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="testimonials-item">
+                            <div class="content-card" data-testimonials-item>
+
+                                <figure class="testimonials-avatar-box">
+                                    <img src="./assets/images/BuddyShop.png" alt="Buddy Shop" width="60" style="border-radius: 25%;" data-testimonials-avatar>
+                                </figure>
+
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Buddy Shop</h4>
+
+                                <div class="testimonials-text" data-testimonials-text>
+                                    <p>
+                                    Брендбук получился очень крутым и стильным! Всё выполнено на высшем уровне, учтены все пожелания. Спасибо за профессионализм и творческий подход!
+                                    </p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="testimonials-item">
+                            <div class="content-card" data-testimonials-item>
+
+                                <figure class="testimonials-avatar-box">
+                                    <img src="./assets/images/ARZYSHMIT.jpg" alt="ARZYSHMIT" width="60" style="border-radius: 25%;" data-testimonials-avatar>
+                                </figure>
+
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>ARZYSHMIT</h4>
+
+                                <div class="testimonials-text" data-testimonials-text>
+                                    <p>
+                                        Хотел бы поделиться опытом работы с графическим дизайнером @Alexandr_Madibaev
+                                Работа выполнена четко и оперативно. Связь держалась хорошая. 
+                                Рекомендую к работе!
+
+                                    </p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                        <li class="testimonials-item">
+                            <div class="content-card" data-testimonials-item>
+
+                                <figure class="testimonials-avatar-box">
+                                    <img src="./assets/images/Safo Taxi.png" alt="Safo Taxi" width="60" style="border-radius: 25%;" data-testimonials-avatar>
+                                </figure>
+
+                                <h4 class="h4 testimonials-item-title" data-testimonials-title>Safo Taxi</h4>
+
+                                <div class="testimonials-text" data-testimonials-text>
+                                    <p>
+                                        Хочу отметить отличный результат — брендбук вышел стильным и гармоничным. Всё сделано на самом высоком уровне, с учётом всех нюансов. Спасибо за вашу компетентность и творческое видение!
+
+                                    </p>
+                                </div>
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+
+                <!--
+          - testimonials modal
+        -->
+
+<div id="testimonial-modal-1" class="testimonials-modal">
+    <div class="testimonials-modal-content">
+        <button class="testimonials-modal-close" onclick="closeTestimonialModal('testimonial-modal-1')" aria-label="Закрыть">&times;</button>
+        <figure class="testimonials-modal-avatar-box">
+            <img src="./assets/images/Specson.png" alt="Specson">
+        </figure>
+        <h4 class="testimonials-modal-title">Specson</h4>
+        <div class="testimonials-modal-text">
+            <p>Результат превзошёл ожидания: брендбук получился стильным и очень качественным. Все пожелания были учтены, за что отдельная благодарность за профессионализм и внимание к деталям.</p>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial-modal-2" class="testimonials-modal">
+    <div class="testimonials-modal-content">
+        <button class="testimonials-modal-close" onclick="closeTestimonialModal('testimonial-modal-2')" aria-label="Закрыть">&times;</button>
+        <figure class="testimonials-modal-avatar-box">
+            <img src="./assets/images/HARF.jpg" alt="ХАРФ">
+        </figure>
+        <h4 class="testimonials-modal-title">издательство "ХАРФ"</h4>
+        <div class="testimonials-modal-text">
+            <p>Мы сотрудничаем с Александром уже несколько лет и всегда остаёмся довольны результатом. Его профессионализм, внимательность к деталям и творческий подход позволяют реализовывать даже самые сложные проекты. Рекомендуем Александра как надёжного и ответственного специалиста!</p>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial-modal-3" class="testimonials-modal">
+    <div class="testimonials-modal-content">
+        <button class="testimonials-modal-close" onclick="closeTestimonialModal('testimonial-modal-3')" aria-label="Закрыть">&times;</button>
+        <figure class="testimonials-modal-avatar-box">
+            <img src="./assets/images/EkoNeva - white - red@1,25x.png" alt="EkoNeva">
+        </figure>
+        <h4 class="testimonials-modal-title">EkoNeva</h4>
+        <div class="testimonials-modal-text">
+            <p>Оперативная и качественная работа, логотип понравился, спасибо за работу!</p>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial-modal-4" class="testimonials-modal">
+    <div class="testimonials-modal-content">
+        <button class="testimonials-modal-close" onclick="closeTestimonialModal('testimonial-modal-4')" aria-label="Закрыть">&times;</button>
+        <figure class="testimonials-modal-avatar-box">
+            <img src="./assets/images/BuddyShop.png" alt="Buddy Shop">
+        </figure>
+        <h4 class="testimonials-modal-title">Buddy Shop</h4>
+        <div class="testimonials-modal-text">
+            <p>Брендбук получился очень крутым и стильным! Всё выполнено на высшем уровне, учтены все пожелания. Спасибо за профессионализм и творческий подход!</p>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial-modal-5" class="testimonials-modal">
+    <div class="testimonials-modal-content">
+        <button class="testimonials-modal-close" onclick="closeTestimonialModal('testimonial-modal-5')" aria-label="Закрыть">&times;</button>
+        <figure class="testimonials-modal-avatar-box">
+            <img src="./assets/images/ARZYSHMIT.jpg" alt="ARZYSHMIT">
+        </figure>
+        <h4 class="testimonials-modal-title">ARZYSHMIT</h4>
+        <div class="testimonials-modal-text">
+            <p>Хотел бы поделиться опытом работы с графическим дизайнером @Alexandr_Madibaev. Работа выполнена четко и оперативно. Связь держалась хорошая. Рекомендую к работе!</p>
+        </div>
+    </div>
+</div>
+
+<div id="testimonial-modal-6" class="testimonials-modal">
+    <div class="testimonials-modal-content">
+        <button class="testimonials-modal-close" onclick="closeTestimonialModal('testimonial-modal-6')" aria-label="Закрыть">&times;</button>
+        <figure class="testimonials-modal-avatar-box">
+            <img src="./assets/images/Safo Taxi.png" alt="Safo Taxi">
+        </figure>
+        <h4 class="testimonials-modal-title">Safo Taxi</h4>
+        <div class="testimonials-modal-text">
+            <p>Хочу отметить отличный результат — брендбук вышел стильным и гармоничным. Всё сделано на самом высоком уровне, с учётом всех нюансов. Спасибо за вашу компетентность и творческое видение!</p>
+        </div>
+    </div>
+</div>
+
+                <!--
+          - clients
+        -->
+
+                <section class="clients">
+
+                    <h3 class="h3 clients-title">Clients</h3>
+
+                    <ul class="clients-list has-scrollbar">
+
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-1-color.png" alt="client logo">
+                            </a>
+                        </li>
+
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-2-color.png" alt="client logo">
+                            </a>
+                        </li>
+
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-3-color.png" alt="client logo">
+                            </a>
+                        </li>
+
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-4-color.png" alt="client logo">
+                            </a>
+                        </li>
+
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-5-color.png" alt="client logo">
+                            </a>
+                        </li>
+
+                        <li class="clients-item">
+                            <a href="#">
+                                <img src="./assets/images/logo-6-color.png" alt="client logo">
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+
+
+
+
+            <!--
+        - #RESUME
+      -->
+
+            <article class="resume" data-page="resume">
+
+                <header>
+                    <h2 class="h2 article-title">Resume</h2>
+                </header>
+
+                <section class="timeline">
+
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">Experience</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">Private orders</h4>
+
+                            <span>2015 — Present</span>
+
+                            <p class="timeline-text">
+                                My private orders in web/graphic design are personalized projects tailored to clients' preferences. I aim to deliver creative and ready-to-use products that enhance their businesses.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">Advertising Agency "Profi Print" - Senior graphic/web designer</h4>
+
+                            <span>2017 — 2019</span>
+
+                            <p class="timeline-text">
+                                I worked as a senior graphic/web designer at the Profi Print advertising agency. My role was to develop graphic projects and web design, including design conceptualization, creation of visual elements for advertising campaigns, development of website
+                                interfaces, and the creation of graphic materials for printing. As a senior designer, I also led the team, ensuring consistency and quality throughout the design process in the agency's projects.
+                            </p>
+
+                        </li>
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">JSC "Viza Promo" - Graphic designer</h4>
+
+                            <span>2013 — 2015</span>
+
+                            <p class="timeline-text">
+                                I worked as a graphic designer at JSC "Viza Promo," a company specializing in souvenir products. My role involved designing graphics for various souvenir items such as mugs, t-shirts, keychains, and other items used for corporate gifts, merchandising,
+                                or promotional campaigns.
+                            </p>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <section class="timeline">
+
+                    <div class="title-wrapper">
+                        <div class="icon-box">
+                            <ion-icon name="book-outline"></ion-icon>
+                        </div>
+
+                        <h3 class="h3">Education</h3>
+                    </div>
+
+                    <ol class="timeline-list">
+
+                        <li class="timeline-item">
+
+                            <h4 class="h4 timeline-item-title">University ITMO</h4>
+
+                            <span>2021 — Present</span>
+
+                            <p class="timeline-text">
+                                Software Enginereering.
+                            </p>
+
+                        </li>
+
+                    </ol>
+
+                </section>
+
+                <section class="skill">
+                    <h3 class="h3 skills-title">My skills</h3>
+                    <ul class="skills-list content-card">
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <i class="fas fa-code skill-icon"></i>
+                                <h5 class="h5">Web design</h5>
+                                <data value="80">80%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill skill-progress-80"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <i class="fas fa-paint-brush skill-icon"></i>
+                                <h5 class="h5">Graphic design</h5>
+                                <data value="95">95%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill skill-progress-95"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <i class="fas fa-landmark skill-icon"></i>
+                                <h5 class="h5">Branding</h5>
+                                <data value="90">90%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill skill-progress-90"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <i class="fas fa-cloud skill-icon"></i>
+                                <h5 class="h5">Adobe Pack</h5>
+                                <data value="90">90%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill skill-progress-90"></div>
+                            </div>
+                        </li>
+                        <li class="skills-item">
+                            <div class="title-wrapper">
+                                <i class="fas fa-robot skill-icon"></i>
+                                <h5 class="h5">AI Experience</h5>
+                                <data value="60">60%</data>
+                            </div>
+                            <div class="skill-progress-bg">
+                                <div class="skill-progress-fill skill-progress-60"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+            </article>
+
+
+
+
+
+            <!--
+        - #PORTFOLIO
+      -->
+
+            <article class="portfolio" data-page="portfolio">
+
+                <header>
+                    <h2 class="h2 article-title">Portfolio</h2>
+                </header>
+
+                <section class="projects">
+
+                    <ul class="filter-list">
+
+                        <li class="filter-item">
+                            <button type="button" class="active" data-filter-btn>All</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button type="button" data-filter-btn data-select-item>Web Design</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button type="button" data-filter-btn data-select-item>Graphic Design</button>
+                        </li>
+
+                        <li class="filter-item">
+                            <button type="button" data-filter-btn data-select-item>Branding</button>
+                        </li>
+
+                    </ul>
+
+                    <div class="filter-select-box">
+
+                        <button type="button" class="filter-select" data-select>
+
+              <span class="select-value" data-selecct-value>Select category</span>
+
+              <span class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </span>
+
+            </button>
+
+                        <ul class="select-list">
+
+                            <li class="filter-item">
+                                <button type="button" class="active" data-select-item data-filter-btn>All</button>
+                            </li>
+
+                            <li class="filter-item">
+                                <button type="button" data-select-item data-filter-btn>Web Design</button>
+                            </li>
+
+                            <li class="filter-item">
+                                <button type="button" data-select-item data-filter-btn>Graphic Design</button>
+                            </li>
+
+                            <li class="filter-item">
+                                <button type="button" data-select-item data-filter-btn>Branding</button>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <ul class="project-list">
+
+                        <li class="project-item  active" data-filter-item data-category="graphic design">
+                            <a href="javascript:void(0);" data-project-url="./assets/images/11.jpg" data-project-title="The concept of advertising 'CityLight' for Alif Bank" data-project-category="Graphic Design">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/11.jpg" alt="The concept of advertising banner 'Oliver on Spotify'" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">The concept of advertising banner 'Oliver on Spotify' </h3>
+
+                                <p class="project-category">Graphic Design</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="graphic design">
+                            <a href="javascript:void(0);" data-project-url="./assets/images/14.jpg" data-project-title="Design preview for YouTube" data-project-category="Graphic Design">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/14.jpg" alt="Design preview for YouTube" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Design preview for YouTube</h3>
+
+                                <p class="project-category">Graphic Design</p>
+
+                            </a>
+                        </li>
+
+                        <li class="project-item  active" data-filter-item data-category="web design">
+                            <a href="javascript:void(0);" data-project-url="./assets/images/15.jpg" data-project-title="Infographics for marketplaces" data-project-category="Web design">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/15.jpg" alt="Infographics for marketplaces" loading="lazy">
+                                </figure>
+
+                                <h3 class="project-title">Infographics for marketplaces</h3>
+
+                                <p class="project-category">Web Design</p>
+
+                            </a>
+                        </li>
+
+
+                        <li class="project-item  active" data-filter-item data-category="branding">
+                            <a href="javascript:void(0);" data-project-url="./assets/images/project-7.jpg" data-project-title="Дизайн кастомных стикеров для ARZYSHMIT" data-project-category="Graphic Design">
+
+                                <figure class="project-img">
+                                    <div class="project-item-icon-box">
+                                        <ion-icon name="eye-outline"></ion-icon>
+                                    </div>
+
+                                    <img src="./assets/images/project-7.jpg" alt="Дизайн кастомных стикеров для ARZYSHMIT" loading="lazy">
+
+                                </figure>
+
+                                <h3 class="project-title">Дизайн кастомных стикеров для ARZYSHMIT</h3>
+
+                                <p class="project-category">Branding</p>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+
+
+
+
+            <!--
+        - #BLOG
+      -->
+
+            <!-- <article class="blog" data-page="blog">
+
+                <header>
+                    <h2 class="h2 article-title">Blog</h2>
+                </header>
+
+                <section class="blog-posts">
+
+                    <ul class="blog-posts-list">
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">Fab 23, 2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
+
+                                    <p class="blog-text">
+                                        Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
+                                    </p>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">Fab 23, 2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Best fonts every designer</h3>
+
+                                    <p class="blog-text">
+                                        Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
+                                    </p>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">Fab 23, 2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Design digest #80</h3>
+
+                                    <p class="blog-text">
+                                        Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
+                                    </p>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">Fab 23, 2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">UI interactions of the week</h3>
+
+                                    <p class="blog-text">
+                                        Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
+                                    </p>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">Fab 23, 2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
+
+                                    <p class="blog-text">
+                                        Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                        <li class="blog-post-item">
+                            <a href="#">
+
+                                <figure class="blog-banner-box">
+                                    <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
+                                </figure>
+
+                                <div class="blog-content">
+
+                                    <div class="blog-meta">
+                                        <p class="blog-category">Design</p>
+
+                                        <span class="dot"></span>
+
+                                        <time datetime="2022-02-23">Fab 23, 2022</time>
+                                    </div>
+
+                                    <h3 class="h3 blog-item-title">Design digest #79</h3>
+
+                                    <p class="blog-text">
+                                        Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
+                                    </p>
+
+                                </div>
+
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </section>
+
+            </article>
+
+-->
+
+
+
+            <!--
+        - #CONTACT
+      -->
+
+            <article class="contact" data-page="contact">
+
+                <header>
+                    <h2 class="h2 article-title">Contact</h2>
+                </header>
+
+                <section class="mapbox" data-mapbox>
+                    <figure>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3119.2072242933496!2d68.78847717648273!3d38.575075565657286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38b5d1a3306f8cf1%3A0x576f77fd7e4a8c39!2sPushkin%20Street%204%2C%20Dushanbe%2C%20Tajikistan!5e0!3m2!1sen!2sbd!4v1719825786262!5m2!1sen!2sbd"
+                            width="600" height="450" title="Карта расположения в Душанбе, Таджикистан" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </figure>
+                </section>
+
+                <section class="contact-form">
+                    <h3 class="h3 form-title">Contact Form</h3>
+                    <form action="https://getform.io/f/zbxddnkb" method="POST" class="form" data-form>
+                        <div class="input-wrapper">
+                            <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+                            <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+                            <input type="tel" name="phone" class="form-input" placeholder="Phone number" required data-form-input>
+
+                        </div>
+                        <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+                        <label for="file-upload" class="file-upload-label">Прикрепить файл</label>
+                        <input type="file" name="file" id="file-upload" class="form-input" required data-form-input>
+                        <button class="form-btn" type="submit" data-form-btn="">
+            <ion-icon name="paper-plane" role="img" class="md hydrated" aria-label="paper plane"></ion-icon>
+            <span>Send Message</span>
+        </button>
+
+                        <!-- Скрытое поле для указания вашего Getform endpoint -->
+                        <input type="hidden" name="form_id" value="your_getform_endpoint_here">
+                    </form>
+                </section>
+
+
+
+
+            </article>
+
+        </div>
+
+    </main>
+
+    <!-- Language floating widget -->
+    <div class="lang-widget" data-lang-widget>
+        <button type="button" class="lang-fab" data-lang-widget-toggle aria-label="Switch language">
+            <ion-icon name="language-outline"></ion-icon>
+        </button>
+        <div class="lang-panel" data-lang-panel>
+            <button type="button" class="lang-option" data-lang-option data-lang="en">EN</button>
+            <button type="button" class="lang-option" data-lang-option data-lang="ru">RU</button>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--
+    - custom js link
+  -->
+    <script src="./assets/js/script.js?v=2" defer></script>
+
+    <!--
+    - ionicon link
+  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Тест навигации -->
+    <script>
+        // Проверяем, что скрипт загрузился
+        console.log('Скрипт загружен');
+        
+        // Проверяем элементы навигации
+        document.addEventListener('DOMContentLoaded', function() {
+            // Toggle sidebar (Show Contacts)
+            const sidebar = document.querySelector('[data-sidebar]');
+            const sidebarBtn = document.querySelector('[data-sidebar-btn]');
+            if (sidebar && sidebarBtn) {
+                sidebarBtn.addEventListener('click', function() {
+                    sidebar.classList.toggle('active');
+                    const label = sidebarBtn.querySelector('span');
+                    if (label) {
+                        label.textContent = sidebar.classList.contains('active') ? 'Hide Contacts' : 'Show Contacts';
+                    }
+                });
+            }
+
+            // Language toggle (header button removed; using i18n API directly)
+            const langBtn = null;
+            const i18n = {
+                ru: {
+                    'nav.about': 'Обо мне',
+                    'nav.resume': 'Резюме',
+                    'nav.portfolio': 'Портфолио',
+                    'nav.contact': 'Контакты',
+                    'show.contacts': 'Показать контакты',
+                    'hide.contacts': 'Скрыть контакты',
+                    'select.category': 'Выберите категорию'
+                },
+                en: {
+                    'nav.about': 'About',
+                    'nav.resume': 'Resume',
+                    'nav.portfolio': 'Portfolio',
+                    'nav.contact': 'Contact',
+                    'show.contacts': 'Show Contacts',
+                    'hide.contacts': 'Hide Contacts',
+                    'select.category': 'Select category'
+                }
+            };
+            let currentLang = 'en';
+
+            function applyLang(lang) {
+                currentLang = lang;
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const text = i18n[lang][key];
+                    if (text) el.textContent = text;
+                });
+                // header button removed
+                const selectValueEl = document.querySelector('[data-selecct-value]');
+                if (selectValueEl) selectValueEl.textContent = i18n[lang]['select.category'];
+                if (sidebarBtn) {
+                    const label = sidebarBtn.querySelector('span');
+                    if (label) label.textContent = sidebar.classList.contains('active') ? i18n[lang]['hide.contacts'] : i18n[lang]['show.contacts'];
+                }
+            }
+
+            applyLang('en');
+
+            const navLinks = document.querySelectorAll('[data-nav-link]');
+            const pages = document.querySelectorAll('[data-page]');
+            
+            console.log('Найдено кнопок навигации:', navLinks.length);
+            console.log('Найдено страниц:', pages.length);
+            
+            // Добавляем обработчики событий для отладки
+            navLinks.forEach((link, index) => {
+                link.addEventListener('click', function() {
+                    console.log('Клик по кнопке:', this.textContent);
+                    
+                    // Убираем активный класс со всех кнопок и страниц
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    pages.forEach(p => p.classList.remove('active'));
+                    
+                    // Добавляем активный класс к текущей кнопке
+                    this.classList.add('active');
+                    
+                    // Находим соответствующую страницу
+                    const pageName = this.textContent.toLowerCase();
+                    const targetPage = document.querySelector(`[data-page="${pageName}"]`);
+                    
+                    if (targetPage) {
+                        targetPage.classList.add('active');
+                        console.log('Переключились на страницу:', pageName);
+                    } else {
+                        console.log('Страница не найдена:', pageName);
+                    }
+                });
+            });
+        });
+    </script>
+
+<script>
+// Функции для работы с модальными окнами отзывов
+function openTestimonialModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    
+    modal.style.display = 'flex';
+    setTimeout(() => {
+        modal.classList.add('show');
+    }, 10);
+    document.body.style.overflow = 'hidden';
+}
+
+function closeTestimonialModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+    
+    modal.classList.remove('show');
+    setTimeout(() => {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+    }, 300);
+}
+
+function closeTestimonialModalOnBackdrop(event, modalId) {
+    if (event.target.classList.contains('testimonials-modal')) {
+        closeTestimonialModal(modalId);
+    }
+}
+
+// Инициализация обработчиков для карточек отзывов
+document.addEventListener('DOMContentLoaded', function() {
+    const testimonialItems = document.querySelectorAll('.testimonials-item');
+    
+    testimonialItems.forEach((item, index) => {
+        const card = item.querySelector('.content-card');
+        if (card) {
+            card.addEventListener('click', function() {
+                openTestimonialModal('testimonial-modal-' + (index + 1));
+            });
+        }
+    });
+    
+    // Закрытие модальных окон по клику на фон
+    document.querySelectorAll('.testimonials-modal').forEach(modal => {
+        modal.addEventListener('click', function(event) {
+            if (event.target === this) {
+                closeTestimonialModal(this.id);
+            }
+        });
+    });
+    
+    // Закрытие по Escape
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.querySelectorAll('.testimonials-modal.show').forEach(modal => {
+                closeTestimonialModal(modal.id);
+            });
+        }
+    });
+});
+</script>
+
+    <!-- Фикс фильтра категорий (резервная логика) -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Language floating widget logic
+            (function(){
+                const widget = document.querySelector('[data-lang-widget]');
+                const fab = document.querySelector('[data-lang-widget-toggle]');
+                const panel = document.querySelector('[data-lang-panel]');
+                const options = document.querySelectorAll('[data-lang-option]');
+                if (fab && panel) {
+                    fab.addEventListener('click', function(e){
+                        e.stopPropagation();
+                        panel.classList.toggle('active');
+                    });
+                    document.addEventListener('click', function(e){
+                        if (widget && !widget.contains(e.target)) panel.classList.remove('active');
+                    });
+                }
+                options.forEach(btn => {
+                    btn.addEventListener('click', function(){
+                        const lang = this.getAttribute('data-lang') || 'en';
+                        // прямой вызов i18n без кнопки в хедере
+                        const eventApply = new CustomEvent('apply-lang', { detail: { lang } });
+                        document.dispatchEvent(eventApply);
+                        panel.classList.remove('active');
+                    });
+                });
+
+                // Глобальное событие для смены языка
+                document.addEventListener('apply-lang', function(e){
+                    const lang = (e.detail && e.detail.lang) || 'en';
+                    if (typeof applyLang === 'function') applyLang(lang);
+                });
+            })();
+            const filterItems = document.querySelectorAll('[data-filter-item]');
+            const filterBtns = document.querySelectorAll('[data-filter-btn]');
+            const select = document.querySelector('[data-select]');
+            const selectValue = document.querySelector('[data-selecct-value]');
+            const selectItems = document.querySelectorAll('[data-select-item]');
+            const selectBox = document.querySelector('.filter-select-box');
+            // Modal elements (portfolio)
+            const portfolioModalContainer = document.querySelector('[data-portfolio-modal-container]');
+            const portfolioOverlay = document.querySelector('[data-portfolio-overlay]');
+            const portfolioModalCloseBtn = document.querySelector('[data-portfolio-modal-close-btn]');
+            const portfolioModalImg = document.querySelector('[data-portfolio-modal-img]');
+            const portfolioModalTitle = document.querySelector('[data-portfolio-modal-title]');
+            const portfolioModalCategory = document.querySelector('[data-portfolio-modal-category]');
+
+            const applyFilter = (value) => {
+                const selectedValue = (value || 'all').toLowerCase().trim();
+                filterItems.forEach((item) => {
+                    const cat = (item.dataset.category || '').toLowerCase().trim();
+                    if (selectedValue === 'all' || selectedValue === cat) {
+                        item.classList.add('active');
+                    } else {
+                        item.classList.remove('active');
+                    }
+                });
+            };
+
+            filterBtns.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    const raw = (btn.innerText || '').trim();
+                    if (selectValue) selectValue.textContent = raw;
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    applyFilter(raw);
+                });
+            });
+
+            selectItems.forEach((item) => {
+                item.addEventListener('click', () => {
+                    const raw = (item.innerText || '').trim();
+                    if (selectValue) selectValue.textContent = raw;
+                    if (select) select.classList.remove('active');
+                    applyFilter(raw);
+                });
+            });
+
+            // Открытие/закрытие выпадающего меню по кнопке
+            if (select) {
+                select.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    select.classList.toggle('active');
+                });
+            }
+
+            // Закрытие выпадающего меню при клике вне его
+            document.addEventListener('click', (e) => {
+                const within = selectBox && selectBox.contains(e.target);
+                if (!within && select && select.classList.contains('active')) {
+                    select.classList.remove('active');
+                }
+            });
+
+            applyFilter('all');
+
+            // ---------- Portfolio modal logic ----------
+            const openPortfolioModal = (url, title, category) => {
+                // Поставим заголовок/категорию сразу
+                if (portfolioModalTitle) portfolioModalTitle.textContent = title || '';
+                if (portfolioModalCategory) portfolioModalCategory.textContent = category || '';
+
+                // Спрячем текущее изображение и очистим src, чтобы не было мигания
+                if (portfolioModalImg) {
+                    portfolioModalImg.style.opacity = '0';
+                    portfolioModalImg.src = '';
+                    portfolioModalImg.alt = title || 'portfolio image';
+                }
+                const spinner = document.querySelector('[data-portfolio-spinner]');
+                if (spinner) spinner.style.display = 'block';
+
+                // Открываем модалку сразу, но показываем изображение после загрузки
+                if (portfolioModalContainer && portfolioOverlay) {
+                    portfolioModalContainer.classList.add('active');
+                    portfolioOverlay.classList.add('active');
+                }
+
+                // Предзагрузка изображения
+                const tempImg = new Image();
+                tempImg.onload = () => {
+                    if (portfolioModalImg) {
+                        portfolioModalImg.src = url || '#';
+                        // Дадим кадру примениться, затем раскроем плавно
+                        requestAnimationFrame(() => {
+                            portfolioModalImg.style.opacity = '1';
+                        });
+                    }
+                    if (spinner) spinner.style.display = 'none';
+                };
+                tempImg.src = url || '#';
+            };
+
+            const closePortfolioModal = () => {
+                if (portfolioModalImg) {
+                    portfolioModalImg.style.opacity = '0';
+                    // Очистим src чуть позже, чтобы не ронять анимацию закрытия
+                    setTimeout(() => { if (portfolioModalImg) portfolioModalImg.src = ''; }, 150);
+                }
+                if (portfolioModalContainer && portfolioOverlay) {
+                    portfolioModalContainer.classList.remove('active');
+                    portfolioOverlay.classList.remove('active');
+                }
+            };
+
+            // Delegated click on project anchors
+            document.addEventListener('click', (e) => {
+                const a = e.target.closest('[data-filter-item] a');
+                if (!a) return;
+                e.preventDefault();
+                const url = a.getAttribute('data-project-url');
+                const title = a.getAttribute('data-project-title');
+                const category = a.getAttribute('data-project-category');
+                openPortfolioModal(url, title, category);
+            });
+
+            if (portfolioModalCloseBtn) portfolioModalCloseBtn.addEventListener('click', closePortfolioModal);
+            if (portfolioOverlay) portfolioOverlay.addEventListener('click', closePortfolioModal);
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closePortfolioModal();
+            });
+        });
+    </script>
+
+    <!--
+    - portfolio modal
+  -->
+    <div class="modal-container" data-portfolio-modal-container>
+        <div class="overlay" data-portfolio-overlay></div>
+        <section class="portfolio-modal">
+            <button type="button" class="modal-close-btn" data-portfolio-modal-close-btn aria-label="Закрыть портфолио">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+            <figure class="modal-img-wrapper">
+                <div class="modal-spinner" data-portfolio-spinner aria-hidden="true"></div>
+                <img src="#" alt="Изображение проекта" data-portfolio-modal-img>
+            </figure>
+            <div class="modal-content">
+                <h4 class="h3 modal-title" data-portfolio-modal-title>Название проекта</h4>
+                <p class="modal-category" data-portfolio-modal-category>Категория</p>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
